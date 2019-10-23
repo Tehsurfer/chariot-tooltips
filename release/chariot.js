@@ -1280,6 +1280,7 @@ var Tooltip = function () {
       var subtextMarkup = this._subtextMarkup();
       var buttonFloat = subtextMarkup === '' ? 'center' : 'right';
       var exitButton = '<span class="chariot-tooltip-subtext" style="padding: 10px;float: right;cursor: pointer;">Exit</span>'
+      var exitButtonAlt = '<button class="btn btn-inverse right" style=" background-color: transparent; color: #c50261; ">Exit</button>' 
       var template = '\n      <div class="' + this._classNames() + '">\n        ' + this._arrowMarkup() + '\n        <div class="chariot-tooltip-content">' + this._iconMarkup() + '</div>\n        <h1 class="chariot-tooltip-header">' + this.title + '</h1>\n        <div class="chariot-tooltip-content"><p>' + this.text + '</p></div>\n        <div class="chariot-btn-row">\n          ' + subtextMarkup + '\n          <button class="btn btn-inverse ' + buttonFloat + '">' + this.cta + '</button>\n' + exitButton +'      </div>\n      </div>';
       var $template = $(template);
 
