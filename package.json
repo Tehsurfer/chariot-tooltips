@@ -1,8 +1,8 @@
 {
-  "name": "chariot-tooltips",
+  "name": "@tehsurfer/chariot-tooltips",
   "main": "release/chariot.js",
   "description": "A JavaScript library for creating beautiful in product tutorials",
-  "version": "1.0.3",
+  "version": "1.0.6",
   "repository": "https://github.com/zendesk/chariot-tooltips",
   "engines": {
     "node": ">=6"
