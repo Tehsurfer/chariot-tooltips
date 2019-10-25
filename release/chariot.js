@@ -1307,7 +1307,10 @@ var Tooltip = function () {
     key: '_buttonsMarkup',
     value: function _buttonsMarkup(centered) {
       var buttonFloat = centered ? 'center' : 'right';
-      var buttons = ['<button class="btn btn-inverse btn-next ' + buttonFloat + '">' + this.ctaNext + '</button> <button id="chariot-exit" class="right btn" style=" background-color: transparent; color: #c50261; ">Exit</button>'];
+      var buttons = ['<button class="btn btn-inverse btn-next ' + buttonFloat + '">' + this.ctaNext];
+      if (this.currentStepNum() === 1){
+        buttons[0] +=  '</button> <button id="chariot-exit" class="right btn" style=" background-color: transparent; color: #c50261; ">Skip</button>';
+      }
       var previousButton = this.tutorial.allowSteppingBackward && this.currentStepNum() > 1 ? '<button class="btn btn-previous ' + buttonFloat + '">' + this.ctaPrevious + '</button>' : null;
       if (previousButton) buttons.unshift(previousButton);
       return (centered ? buttons : buttons.reverse()).join('');
